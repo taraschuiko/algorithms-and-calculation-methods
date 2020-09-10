@@ -5,7 +5,7 @@ f = 5.325 - x ** 3 + 2 * x
 
 console.log('Result:', f)
 
-firstDiff = math.derivative('x^2', 'x').evaluate({x: x})
+firstDiff = math.derivative('x^3', 'x').evaluate({x: x})
 secondDiff = math.derivative('2*x', 'x').evaluate({x: x})
 
 fResult = 5.325 - firstDiff + secondDiff
