@@ -15,7 +15,27 @@ matrix = [
   [1, 0, 0, 0, 1]
 ]
 
+mSize = 5
+matrix2 = new Array(mSize)
+for (i = 0; i < mSize; i++) {
+  matrix2[i] = new Array(mSize)
+  for (j = 0; j < mSize; j++) {
+    if (i == 0 && j == 0) {
+      matrix2[i][j] = 1
+    } else if (i == 0 && j == mSize-1) {
+      matrix2[i][j] = 1
+    } else if (i == mSize-1 && j == 0) {
+      matrix2[i][j] = 1
+    } else if (i == mSize-1 && j == mSize-1) {
+      matrix2[i][j] = 1
+    } else {
+      matrix2[i][j] = 0
+    }
+  }
+}
+
 printMatrix(matrix, '1 task')
+printMatrix(matrix2, '1 task programaticaly')
 
 // 2
 
