@@ -15,4 +15,7 @@ dX = 0.5 * 10 ** (-t)
 fResult = Math.abs(fResult) * dX
 mistake = fResult / f
 
+mistakeAbs = Math.abs(fResult - Math.round(fResult))
+
 console.log('Mistake:', mistake)
+console.log('Absolute mistake:', mistakeAbs)
