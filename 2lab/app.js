@@ -5,6 +5,19 @@ printMatrix = (m, name = 'matrix') => {
   }
 }
 
+inputMatrix = matrixName => {
+  rows = prompt(`Input number of rows for matrix ${matrixName}`)
+  columns = prompt(`Input number of columns for matrix ${matrixName}`)
+  matrix = []
+  for (i = 0; i < rows; i++) {
+    matrix[i] = []
+    for (j = 0; j < columns; j++) {
+      matrix[i][j] = prompt(`Enter value for ${i} row ${j} column`)
+    }
+  }
+  return matrix
+}
+
 // 1
 
 matrix = [
@@ -55,6 +68,10 @@ d = [
   [5, 4],
   [6, 5]
 ]
+
+a = inputMatrix('A')
+b = inputMatrix('B')
+c = inputMatrix('C')
 
 substract = (a, b) => {
   result = []
