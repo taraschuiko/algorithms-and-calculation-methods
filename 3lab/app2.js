@@ -5,8 +5,16 @@ let x = [
   0.23, 0.65, 0.23, 4.54, 0.24, 0.76, 1.34, 15.00, 0.43, 0.42, 0.01, 0.91
 ]
 
-let xMean = x.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / x.length
-console.log('Середнє арефметичне: ', xMean)
+function expectation(a, n){
+    const p = 1 / n
+    let sum = a.reduce((accumulator, currentValue, i) => accumulator + (a[i] * p), 0)
+    return sum
+}
+let xExpect = expectation(x, x.length)
+console.log('Математичне сподівання: ', xExpect)
+
+let xAverage = x.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / x.length
+console.log('Середнє арефметичне: ', xAverage)
 
 let xMeanSquare = x.reduce((accumulator, currentValue) => accumulator + currentValue ** 2, 0) / x.length
 console.log('Середнє квадратів: ', xMeanSquare)
